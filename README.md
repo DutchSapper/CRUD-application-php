@@ -1,18 +1,35 @@
 # CRUD-application (Create, Read, Update, Delete)
 
-<p>
-  For this new assingment for school i need to make a CRUD application with the MVC-design (Model, View, Controller).
-  The application has to look something like this, presenting the artciles in a table with ID nr. and Price.
-<img width="357" height="324" alt="afbeelding" src="https://github.com/user-attachments/assets/1d6304ef-f0ee-484e-8165-89ac5cb02df4" />
+# SQL-script voor MVC CRUD-applicatie
 
-When adding articles, the application should look like this.  
-<img width="461" height="205" alt="afbeelding" src="https://github.com/user-attachments/assets/70b54961-86cf-44ef-986a-e34e86da42e0" />
-</p>
+Dit script maakt de database **`crud_articles`** aan en voert de volgende acties uit:
 
-# School assignment (Dutch)
-<P>
-  Opdracht
+1. Maakt de database **`crud_articles`** aan (indien deze nog niet bestaat).
+2. Maakt de tabel **`articles`** aan met de volgende kolommen:
+   - `id` (INT, AUTO_INCREMENT, PRIMARY KEY)
+   - `title` (VARCHAR, 255 tekens, niet leeg)
+   - `content` (TEXT)
+   - `created_at` (TIMESTAMP, standaardwaarde: huidige datum/tijd)
+3. Voegt demo-data toe aan de tabel **`articles`**.
 
+---
+
+## Hoe voer je het script uit?
+
+### Optie 1: Via phpMyAdmin of MySQL Workbench
+1. Open phpMyAdmin of MySQL Workbench.
+2. Selecteer een database (bijv. `mysql`).
+3. Ga naar het tabblad **SQL**.
+4. Klik op **"Bestand kiezen"** en selecteer het `data.sql`-bestand.
+5. Klik op **"Uitvoeren"** (of "Go").
+
+### Optie 2: Via de MySQL-console (command line)
+Voer het volgende commando uit in de terminal of command prompt:
+```bash
+mysql -u [gebruikersnaam] -p < data.sql
+
+
+# School assignment
 Programmeer een MVC CRUD-applicatie met database in PHP.
 
 Maak een eenvoudige CRUD-applicatie, zoals hieronder is weergegeven in het artikel.
@@ -80,12 +97,15 @@ In te leveren bijlage:
 index.php
 
 /controllers
+
      ArticleController.php
 
 /models
+
      Article.php
 
 /views
+
      /article
 
 /sql
@@ -103,4 +123,3 @@ Feedbackaspecten
     Toepassing van PHP en SQL - MVC design pattern.
 
     Reflectieverslag.
-</P>

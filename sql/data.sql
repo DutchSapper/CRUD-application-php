@@ -1,7 +1,10 @@
 -- data.sql fills the database with demo articles.
 
+-- database is created for sharing the database with other people.
+CREATE DATABASE IF NOT EXISTS crud_articles;
+
 -- The right database is selected.
-USE crud_articles
+USE crud_articles;
 
 -- Table is created if it does not exist.
 CREATE TABLE IF NOT EXISTS articles (
