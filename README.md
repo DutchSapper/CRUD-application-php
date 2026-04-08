@@ -1,32 +1,35 @@
 # CRUD-application (Create, Read, Update, Delete)
 
-# SQL-script voor MVC CRUD-applicatie
+# SQL Script for MVC CRUD Application
 
-Dit script maakt de database **`crud_articles`** aan en voert de volgende acties uit:
+This script creates the database **`crud_articles`** and performs the following actions:
 
-1. Maakt de database **`crud_articles`** aan (indien deze nog niet bestaat).
-2. Maakt de tabel **`articles`** aan met de volgende kolommen:
+1. Creates the database **`crud_articles`** (if it does not already exist).
+2. Creates the table **`articles`** with the following columns:
    - `id` (INT, AUTO_INCREMENT, PRIMARY KEY)
-   - `title` (VARCHAR, 255 tekens, niet leeg)
-   - `content` (TEXT)
-   - `created_at` (TIMESTAMP, standaardwaarde: huidige datum/tijd)
-3. Voegt demo-data toe aan de tabel **`articles`**.
+   - `name` (VARCHAR, 255 characters, NOT NULL)
+   - `price` (DECIMAL(5,2))
+3. Inserts demo data into the **`articles`** table.
 
 ---
 
-## Hoe voer je het script uit?
+## How to Execute the Script
 
-### Optie 1: Via phpMyAdmin of MySQL Workbench
-1. Open phpMyAdmin of MySQL Workbench.
-2. Selecteer een database (bijv. `mysql`).
-3. Ga naar het tabblad **SQL**.
-4. Klik op **"Bestand kiezen"** en selecteer het `data.sql`-bestand.
-5. Klik op **"Uitvoeren"** (of "Go").
+---
 
-### Optie 2: Via de MySQL-console (command line)
-Voer het volgende commando uit in de terminal of command prompt:
+### Option 1: Using phpMyAdmin or MySQL Workbench
+1. Open phpMyAdmin or MySQL Workbench.
+2. Select a database (e.g., `mysql`).
+3. Navigate to the **SQL** tab.
+4. Click **"Choose File"** and select the `data.sql` file.
+5. Click **"Execute"** (or "Go").
+
+---
+
+### Option 2: Using the MySQL Command Line
+Run the following command in the terminal or command prompt:
 ```bash
-mysql -u [gebruikersnaam] -p < data.sql
+mysql -u [username] -p < data.sql
 
 
 # School assignment
