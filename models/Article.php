@@ -11,7 +11,7 @@
 
             public static function all() {
                 $list = [];
-                $db = new PDO('mysql:host=localhost;dbname=CRUD_articles;charset=utf8', 'root', '');
+                $db = new PDO('mysql:host=localhost;dbname=crud_articles;charset=utf8', 'root', '');
             
                 // query the database for all articles
                 $req = $db->query('SELECT * FROM articles');
